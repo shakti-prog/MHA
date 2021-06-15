@@ -28,12 +28,12 @@ function About(){
     The questions will be based on overall lifestyle,personality,reaction to a particluar situation,overall mood changes when in tough situation and many more.Based on the anaylsis a report will be generated which will be given to the user stating his/her mental health status . The blog section is all you need to know about mental health these days , types of mental disorders , treatment available and many more. Feedback section will allow you to interact with us and give your honest review about our website and enable us to improve it . Contact Us section is all about our team and our respective domains and the way you can contact us for any issues .  
     </p>
     <hr/>
-    <h1>Benefits</h1>
+    <h1  style={{fontSize:'xx-large',fontFamily:'serif',fontWeight:'bold'}}>Benefits</h1>
     <p style={{fontSize:'x-large',fontFamily:'serif',fontWeight:'bold'}}>
-     <br/> Analysis will be free of cost
-     <br/> Proper set of questions will be used for analysis 
-     <br/> Proper analysis result will be provided in form of report
-     <br/> Suggestions and treatment options are available in blog section 
+     <br style={{fontSize:'x-large',fontFamily:'serif',fontWeight:'bold'}}/> Analysis will be free of cost
+     <br style={{fontSize:'x-large',fontFamily:'serif',fontWeight:'bold'}}/> Proper set of questions will be used for analysis 
+     <br style={{fontSize:'x-large',fontFamily:'serif',fontWeight:'bold'}}/> Proper analysis result will be provided in form of report
+     <br style={{fontSize:'x-large',fontFamily:'serif',fontWeight:'bold'}}/> Suggestions and treatment options are available in blog section 
     </p>
   </Container>
 </Jumbotron>

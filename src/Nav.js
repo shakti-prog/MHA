@@ -2,32 +2,58 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './Nav.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from 'react-router-dom';
+import {Jumbotron,Navbar,NavbarBrand,NavbarToggler,Collapse,NavItem,Nav} from 'reactstrap';
 
-function Nav(){
+function Navigation(){
   return(
-    <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-     <h1 class="navbar-brand" style={{fontSize:'xx-large',fontFamily:'serif'}}>Mental Health Anayalzer</h1> 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <Navbar  expand="md" color="dark" style={{maxHeight:"120px"}}>
+    <div className="container">
+     <NavbarBrand href="/"   style={{fontSize:'xx-large',fontFamily:'serif',marginleft:"200px"}}> MENTAL HEALTH ANALYZER</NavbarBrand>
+         <Nav navbar>
+          <NavItem>
+          <NavLink className="nav-link"  to='/Test' style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}><span className="fa fa-home fa-lg"></span> TAKE A TEST</NavLink>
+          </NavItem>
+          <NavItem>
+             <NavLink className="nav-link" to='/About' style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}><span className="fa fa-info fa-lg"></span>ABOUTUS</NavLink> 
+          </NavItem>
+          <NavItem>
+             <NavLink className="nav-link" to='/Contact' style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}><span className="fa fa-envelope fa-lg"></span>CONTACTUS</NavLink> 
+          </NavItem>
+          <NavItem>
+             <NavLink className="nav-link" to='/Blog' style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}><span className="fa fa-address-card fa-lg"></span>BLOG</NavLink> 
+          </NavItem>
+          <NavItem>
+             <NavLink className="nav-link" to='/Feedback' style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}><span className="fa fa-handshake-o fa-lg"></span>FEEDBACK</NavLink> 
+          </NavItem>
+         </Nav> 
+    </div>
+  </Navbar>
+    /* <div>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div className="container-fluid">
+     <h1 className="navbar-brand" style={{fontSize:'xx-large',fontFamily:'serif'}}>Mental Health Analyzer</h1> 
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>HOMEPAGE</a>
-        <a class="nav-link active" href="/Test" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>TAKE A TEST</a>
-        <a class="nav-link active" href="/Contact" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>CONTACT US</a>
-        <a class="nav-link active" href="/About" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>ABOUT US</a>
-        <a class="nav-link active" href="/Blog" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>BLOG</a>
-        <a class="nav-link active" href="/Feedback" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>FEEDBACK</a>
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
+        <a className="nav-link active" aria-current="page" href="/" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>HOMEPAGE</a>
+        <a className="nav-link active" href="/Test" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>TAKE A TEST</a>
+        <a className="nav-link active" href="/Contact" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>CONTACT US</a>
+        <a className="nav-link active" href="/About" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>ABOUT US</a>
+        <a className="nav-link active" href="/Blog" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>BLOG</a>
+        <a className="nav-link active" href="/Feedback" style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}>FEEDBACK</a>
       </div>
     </div>
   </div>
 </nav>     
-    </div>
+    </div> */
+    
+
          
   )  
 }
 
 
-export default Nav;
+export default Navigation;
