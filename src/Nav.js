@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Nav.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -6,10 +6,16 @@ import { NavLink } from 'react-router-dom';
 import {Jumbotron,Navbar,NavbarBrand,NavbarToggler,Collapse,NavItem,Nav} from 'reactstrap';
 
 function Navigation(){
+  const[isNavOpen,setNavOpen] = useState(false);
+  function toggleNav(){
+      setNavOpen(!isNavOpen);
+  }
   return(
     <Navbar  expand="md" color="dark" style={{maxHeight:"120px"}}>
     <div className="container">
-     <NavbarBrand href="/"   style={{fontSize:'xx-large',fontFamily:'serif',marginleft:"200px"}}> MENTAL HEALTH ANALYZER</NavbarBrand>
+      <NavbarToggler onClick={toggleNav}/>
+     <NavbarBrand href="/" style={{fontSize:'x-large',fontFamily:'serif',marginleft:"200px"}}> MENTAL HEALTH ANALYZER</NavbarBrand>
+     <Collapse isOpen={isNavOpen} navbar>
          <Nav navbar>
           <NavItem>
           <NavLink className="nav-link"  to='/Test' style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}><span className="fa fa-home fa-lg"></span> TAKE A TEST</NavLink>
@@ -26,7 +32,8 @@ function Navigation(){
           <NavItem>
              <NavLink className="nav-link" to='/Feedback' style={{fontSize:'x-large',fontFamily:'serif',paddingLeft:'24px',paddingRight:'24px'}}><span className="fa fa-handshake-o fa-lg"></span>FEEDBACK</NavLink> 
           </NavItem>
-         </Nav> 
+         </Nav>
+         </Collapse> 
     </div>
   </Navbar>
     /* <div>

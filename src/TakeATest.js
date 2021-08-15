@@ -57,29 +57,52 @@ function TakeATest(){
          s13=user.q13;
          s14=user.q14;
          s15=user.q15;
-        const res = fetch(' https://pbl-backend.herokuapp.com/testdata',{
-        mode: 'no-cors',   
+         console.log(s1);  console.log(s2);  console.log(s3);
+         console.log(s4);  console.log(s5);  console.log(s6);
+
+        //  const res = fetch('https://pbl-backend.herokuapp.com/testdata',{  
+       const res = fetch('https://pbl-backend.herokuapp.com/testdata',{          
         method:"POST",
+        //mode:"no-cors",
         headers:{
          "Content-Type":"application/json"
         }, 
         body:JSON.stringify({
-          name,gender,email,number,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15
+          "name":user.name,
+          "gender":user.gender,
+          "email":user.email,
+          "number":user.number,
+          "q1":user.q1,
+          "q2":user.q2,
+          "q3":user.q3,
+          "q4":user.q4,
+          "q5":user.q5,
+          "q6":user.q6,
+          "q7":user.q7,
+          "q8":user.q8,
+           "q9":user.q9,
+           "q10":user.q10,
+           "q11":user.q11,
+           "q12":user.q12,
+           "q13":user.q13,
+           "q14":user.q14,
+           "q15":user.q15
         })
       }).then((res)=>{
         //console.log(res.json()); 
        return res;
       }).then((res2)=>{
-          if(res2.status == 200)
-           {
+          console.log(res2.status)
+          //if(res2.status == 200)
+           //{
             setActive(true)
-            console.log(res2);
-            console.log(res2.json());
+            //console.log(res2);
+            //console.log(res2.json());
             window.alert("Response has been recorded");
-           }
-           else{
-             window.alert("Looks like you have already taken a test pls try with another emailid");
-           }
+           //}
+          // else{
+            // window.alert("Looks like you have already taken a test pls try with another emailid");
+           //}
       })
       }
 

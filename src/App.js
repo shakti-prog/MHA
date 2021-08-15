@@ -11,6 +11,7 @@ import HomePage from './HomePage';
 import FormPage from './Feed';
 import Ret from './Message';
 import 'font-awesome/css/font-awesome.css';
+import Footer from './footer';
 //import 'bootstrap-social/bootstrap-social.css';
 
 
@@ -28,6 +29,7 @@ function App() {
        <Route path="/Feedback" exact component={FormPage}/>
        <Route path="/Message" exact component={Ret}/>
       </Switch>
+      <Footer/>
       </div>
     </BrowserRouter>
   );
